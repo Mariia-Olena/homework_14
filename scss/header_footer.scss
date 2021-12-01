@@ -2,7 +2,6 @@
 
 
 
-
 .gradient {
     background-color: $color_active_active;
 }
@@ -11,10 +10,8 @@
     max-width: 1720px;
     margin-right: auto;
     margin-left: auto;
+    padding: 0 60px;
 }
-
-
-
 
 * {
     box-sizing: border-box;
@@ -25,20 +22,24 @@ body {
 }
 
 .header {
-    display: flex;
-    justify-content: space-between;
+    padding-top: 50px;
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    grid-template-areas:
+    "header__logo header__nav"
+    "header__logo header__nav__menu__list";
+}
+
+.header__logo {
+    grid-area: header__logo;
 }
 
 .header__nav {
     display: flex;
-    flex-direction: column;
-}
-
-.header__nav__wrap {
-    display: flex;
     justify-content: flex-end;
     align-items: center;
     margin-bottom: 16px;
+    grid-area: header__nav;
 }
 
 .header__nav__list {
@@ -118,6 +119,7 @@ body {
 .header__nav__menu__list {
     display: flex;
     justify-content: flex-end;
+    grid-area: header__nav__menu__list;
 }
 
 .header__nav__menu__item {
@@ -130,12 +132,180 @@ body {
     color: $color_white;
 }
 
-@media (max-width: 1023px) {
-    .container {
-        padding: 0 60px;
+.footer {
+    background-color: $color_grey_bg;
+}
+
+.footer__wrap {
+    padding: 30px 0;
+    border-top: 2px solid $color_grey_separator;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "footer__address footer__copyright"
+    "footer__contacts footer__contacts";
+}
+
+.footer__address {
+    grid-area: footer__address;
+    display: flex;
+    align-items: center;
+    margin-bottom: 21px;
+}
+
+.footer__text {
+    @extend %link;
+    margin-right: 26px;
+    color: $color_main;
+    position: relative;
+
+    &::after {
+        content: '';
+        display: block;
+        width: 6px;
+        height: 6px;
+        background-color: $color_grey_text;
+        border-radius: 50%;
+        position: absolute;
+        top: 7.5px;
+        right: -16px;
+    }
+}
+
+.footer__link {
+    @extend %font_h3_caps;
+    text-decoration: none;
+    color: $color_active_regular;
+}
+
+
+.footer__contacts {
+    grid-area: footer__contacts;
+    display: flex;
+    align-items: center;
+}
+
+.footer__number {
+    @extend  %font_h4;
+    text-decoration: none;
+    color: $color_main_alt;
+    margin: 0 26px;
+    position: relative;
+
+    &::before {
+        content: '';
+        display: block;
+        width: 6px;
+        height: 6px;
+        background-color: $color_grey_text;
+        border-radius: 50%;
+        position: absolute;
+        top: 7.5px;
+        left: -16px;
     }
 
+    &::after {
+        content: '';
+        display: block;
+        width: 6px;
+        height: 6px;
+        background-color: $color_grey_text;
+        border-radius: 50%;
+        position: absolute;
+        top: 7.5px;
+        right: -16px;
+    }
+}
+
+.footer__email {
+    @extend  %font_h4;
+    text-decoration: none;
+    color: $color_active_regular;
+}
+
+.footer__copyright {
+    grid-area: footer__copyright;
+    display: flex;
+    justify-content: flex-end;
+    @extend %link;
+    color: $color_grey_text;
+}
+
+@media (max-width: 1023px) {
+    .header {
+        grid-template-areas:
+        "header__nav header__nav"
+        "header__logo header__logo" 
+        "header__nav__menu__list header__nav__menu__list";
+    }
+
+    .header__nav {
+        justify-content: flex-start;
+        margin-bottom: 30px;
+    }
     
+    .header__nav__menu__list {
+        justify-content: flex-start;
+        margin-left: 0;
+    }
+    
+    .header__logo {
+        margin-bottom: 30px;
+    }
 
+    .header__nav__item {
+        margin-left: 0;
+        margin-right: 15px;
+    }
 
+    .header__nav__menu__item {
+        margin-left: 0;
+        margin-right: 15px;
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        padding: 0 30px;
+    }
+
+    .footer__wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer__address {
+        flex-direction: column;
+    }
+
+    .footer__text {
+        margin-bottom: 10px;
+        margin-right: 0;
+
+        &::after {
+            display: none;
+        }
+    }
+
+    .footer__contacts {
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+
+    .footer_facebook {
+        margin-bottom: 10px;
+    }
+
+    .footer__number {
+        margin-bottom: 10px;
+
+        &::before {
+            display: none;
+        }
+    
+        &::after {
+            display: none;
+        }
+    }
 }
