@@ -38,10 +38,9 @@ body {
 }
 
 .container {
-  max-width: 1720px;
+  max-width: 1600px;
   margin-right: auto;
   margin-left: auto;
-  padding: 0 60px;
 }
 
 .gradient {
@@ -78,9 +77,10 @@ body {
   bottom: 30px;
 }
 
-.menu__wrap {
-  padding-top: 60px;
+.menu {
   display: flex;
+  padding-top: 60px;
+  margin-bottom: 60px;
 }
 .menu__list {
   text-align: right;
@@ -164,6 +164,17 @@ body {
 }
 .services__text {
   color: #FFFFFF;
+}
+
+@media (max-width: 1919px) {
+  .container {
+    padding: 0 60px;
+  }
+}
+@media (max-width: 1023px) {
+  .container {
+    padding: 0;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

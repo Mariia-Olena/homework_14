@@ -9,10 +9,9 @@ body {
 }
 
 .container {
-    max-width: 1720px;
+    max-width: 1600px;
     margin-right: auto;
     margin-left: auto;
-    padding: 0 60px;
 }
 
 .gradient {
@@ -54,10 +53,9 @@ body {
 }
 
 .menu {
-    &__wrap {
-        padding-top: 60px;
-        display: flex;
-    }
+    display: flex;
+    padding-top: 60px;
+    margin-bottom: 60px;
     
     &__list {
         text-align: right;
@@ -164,5 +162,29 @@ body {
     &__text {
         @extend %font_p;
         color: $color_white;
+    }
+}
+
+
+
+@media (max-width: 1919px) {
+    .container {
+        padding: 0 60px;
+    }
+}
+
+@media (max-width: 1439px) {
+
+}
+
+@media (max-width: 1023px) {
+    .container {
+        padding: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+
     }
 }
