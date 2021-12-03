@@ -17,6 +17,13 @@
                     <a href="index.html" class="header__logo">
                         <img src="images/logo_hlegal.png" alt="logo of the hlegal law company" class="header__logo_img">
                     </a>
+                    <button class="header__burger"> 
+                        <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 10.5H25" stroke="white" stroke-width="2"/>
+                            <path d="M7 16.5H25" stroke="white" stroke-width="2"/>
+                            <path d="M7 22.5H25" stroke="white" stroke-width="2"/>
+                        </svg>
+                    </button>
                     <div class="header__nav">
                         <ul class="header__nav__list">
                             <li class="header__nav__item">
@@ -37,23 +44,31 @@
                             </svg>
                         </a>
                     </div>
-                    <ul class="header__nav__menu__list">
-                        <li class="header__nav__menu__item">
-                            <a href="#" class="header__nav__menu__link">about us</a>
-                        </li>
-                        <li class="header__nav__menu__item">
-                            <a href="#" class="header__nav__menu__link">services</a>
-                        </li>
-                        <li class="header__nav__menu__item">
-                            <a href="#" class="header__nav__menu__link">team</a>
-                        </li>
-                        <li class="header__nav__menu__item">
-                            <a href="#" class="header__nav__menu__link">publications</a>
-                        </li>
-                        <li class="header__nav__menu__item">
-                            <a href="#" class="header__nav__menu__link">contact</a>
-                        </li>
-                    </ul>
+                    <div class="header__nav__menu__wrap">
+                        <button class="header__nav__menu__button">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 7L25 25" stroke="#EC6F5D" stroke-width="2"/>
+                                <path d="M25 7L7 25" stroke="#EC6F5D" stroke-width="2"/>
+                            </svg>
+                        </button>
+                        <ul class="header__nav__menu__list">
+                            <li class="header__nav__menu__item">
+                                <a href="#" class="header__nav__menu__link">about us</a>
+                            </li>
+                            <li class="header__nav__menu__item">
+                                <a href="#" class="header__nav__menu__link">services</a>
+                            </li>
+                            <li class="header__nav__menu__item">
+                                <a href="#" class="header__nav__menu__link">team</a>
+                            </li>
+                            <li class="header__nav__menu__item">
+                                <a href="#" class="header__nav__menu__link">publications</a>
+                            </li>
+                            <li class="header__nav__menu__item">
+                                <a href="#" class="header__nav__menu__link">contact</a>
+                            </li>
+                        </ul>
+                    </div>
                 </header>
                 <div class="h">
                     <h1 class="h__title">you legal solutions provider</h1>
@@ -65,7 +80,7 @@
                     </a>
                 </div>
             </div>  
-            <section class="menu__wrap" id="menu">
+            <section class="menu" id="menu">
                 <ul class="menu__list">
                     <li class="menu__item">
                         <a href="" class="menu__link menu__link_active">Consistent</a>
@@ -79,7 +94,7 @@
                     <li class="menu__item">
                         <a href="" class="menu__link">Business oriented</a>
                     </li>
-                </ul>
+                </ul>-->
                 <div class="menu_text-part">
                     <h2 class="menu__subtitle">We turn the idea of legal services</h2>
                     <p class="menu__text">
@@ -90,7 +105,7 @@
             <section class="services">
                 <a href="#" class="services__link_title">Services
                     <svg class="services__link_svg" width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M3.5 2L8 6.5L3.5 11" stroke="#F0145A" stroke-width="2"/>
+                        <path d="M3.5 2L8 6.5L3.5 11" stroke="#B3B3BA" stroke-width="2"/>
                     </svg>
                 </a>
                 <h2 class="services__title">What can we do better than others?</h2>
@@ -267,7 +282,7 @@
                 </div>
             </div>
         </section>
-    </main>
+    </main>-->
     <footer class="footer">
         <div class="container">
             <div class="footer__wrap">
@@ -288,5 +303,17 @@
             </div>
         </div>
     </footer>
+    <script>
+        const button = document.querySelector('.header__burger');
+        const menu = document.querySelector('.header__nav__menu__wrap');
+        const close = document.querySelector('.header__nav__menu__button');
+
+        button.addEventListener('click', () => {
+            menu.classList.toggle('header__nav__menu__wrap_open');
+        });
+        close.addEventListener('click', () => {
+            menu.classList.remove('header__nav__menu__wrap_open');
+        });
+    </script>
 </body>
 </html>
