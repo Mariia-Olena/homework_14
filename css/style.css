@@ -1,4 +1,4 @@
-.services__title, .menu__link, .menu__title {
+.services__title, .menu__link, .h__title {
   font-size: 38px;
   font-weight: 700;
   line-height: 46px;
@@ -45,50 +45,52 @@ body {
 }
 
 .gradient {
-  background-image: url(../images/h.svg), linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
-  background-position-x: center;
-  background-repeat: no-repeat;
+  background-image: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
   padding-bottom: 60px;
   border-radius: 0px 0px 12px 12px;
 }
 
-.menu {
-  margin-bottom: 60px;
-}
-
-.menu__wrap_h {
+.h {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
-
-.menu__title {
+.h__wrap {
+  background-image: url(../images/h.svg);
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  position: relative;
+}
+.h__title {
   color: #FFFFFF;
   margin-top: auto;
+  margin-bottom: auto;
 }
-
-.menu__button {
-  margin-top: auto;
-  margin-bottom: 144px;
+.h__button {
+  position: absolute;
+  bottom: 30px;
 }
 
 .menu__wrap {
   padding-top: 60px;
   display: flex;
 }
-
 .menu__list {
   text-align: right;
   padding-right: 60px;
   border-right: 4px solid #FFFFFF4D;
 }
-
 .menu__item {
   margin-bottom: 30px;
   width: 500px;
 }
-
 .menu__link {
   color: #B3B3BA;
   text-decoration: none;
@@ -104,7 +106,6 @@ body {
   -webkit-background-clip: text;
   color: transparent;
 }
-
 .menu__link_active {
   background-image: linear-gradient(90.13deg, #EF8080 0.84%, #F0145A 99.96%);
   background-size: cover;
@@ -112,19 +113,16 @@ body {
   -webkit-background-clip: text;
   color: transparent;
 }
-
 .menu_text-part {
   margin-left: 60px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-
 .menu__subtitle {
   color: #FFFFFF;
   margin-bottom: 30px;
 }
-
 .menu__text {
   font-size: 19px;
   line-height: 30px;
@@ -140,7 +138,6 @@ body {
   color: #F0145A;
   transition: 0.3s;
 }
-
 .services__title {
   background-image: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
   background-size: cover;
@@ -149,27 +146,22 @@ body {
   color: transparent;
   margin-bottom: 60px;
 }
-
 .services__list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 60px;
 }
-
 .services__link {
   text-decoration: none;
 }
-
 .services__img {
   border-radius: 24px;
   margin-bottom: 30px;
 }
-
 .services__subtitle {
   color: #24A3FF;
   margin-bottom: 15px;
 }
-
 .services__text {
   color: #FFFFFF;
 }
