@@ -16,7 +16,7 @@ body {
     grid-template-columns: 130px 1fr;
     grid-template-areas:
     "header__logo header__nav"
-    "header__logo header__nav__menu__list";
+    "header__logo header__nav__menu__wrap";
 
     &__logo {
         grid-area: header__logo;
@@ -106,6 +106,10 @@ body {
             top: 7.5px;
             right: -11px;
         }
+    }
+
+    &__nav__menu__wrap {
+        grid-area: header__nav__menu__wrap;
     }
 
     &__nav__menu__button {
@@ -239,16 +243,16 @@ body {
         grid-template-areas:
         "header__nav header__nav"
         "header__logo header__logo" 
-        "header__nav__menu__list header__nav__menu__list";
+        "header__nav__menu__wrap header__nav__menu__wrap";
 
         &__nav {
             justify-content: flex-start;
             margin-bottom: 30px;
         }
-        
+  
         &__nav__menu__list {
             justify-content: flex-start;
-            margin-left: 0;
+
         }
         
         &__logo {
@@ -278,7 +282,7 @@ body {
 
 
         &__logo {
-            margin-left: 30px;
+            margin-left: 15px;
         }
 
         &__nav {
@@ -286,6 +290,7 @@ body {
             justify-content: space-between;
             background-color: #F5F5FA33;
             padding: 15px;
+            margin-bottom: 15px;
         }
 
         &__nav__text {
@@ -344,6 +349,10 @@ body {
             &:last-child {
                 margin-bottom: 0;
             }
+
+            &:active {
+                background-color: $color_grey_separator;
+            }
         }
 
         &__nav__menu__link {
@@ -353,6 +362,10 @@ body {
             line-height: 29px;
             color: $color_active_regular;
         }
+
+       &__nav__menu__link_active {
+        color: $color_accent;
+       }
 
         &__burger {
             display: block;
@@ -364,7 +377,6 @@ body {
             cursor: pointer;
             margin-left: auto;
             margin-right: 15px;
-
         }
     }
 

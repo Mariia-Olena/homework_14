@@ -32,7 +32,7 @@ body {
   padding-top: 50px;
   display: grid;
   grid-template-columns: 130px 1fr;
-  grid-template-areas: "header__logo header__nav" "header__logo header__nav__menu__list";
+  grid-template-areas: "header__logo header__nav" "header__logo header__nav__menu__wrap";
 }
 .header__logo {
   grid-area: header__logo;
@@ -109,6 +109,9 @@ body {
   position: absolute;
   top: 7.5px;
   right: -11px;
+}
+.header__nav__menu__wrap {
+  grid-area: header__nav__menu__wrap;
 }
 .header__nav__menu__button {
   display: none;
@@ -212,7 +215,7 @@ body {
 @media (max-width: 1023px) {
   .header {
     margin-left: 60px;
-    grid-template-areas: "header__nav header__nav" "header__logo header__logo" "header__nav__menu__list header__nav__menu__list";
+    grid-template-areas: "header__nav header__nav" "header__logo header__logo" "header__nav__menu__wrap header__nav__menu__wrap";
   }
   .header__nav {
     justify-content: flex-start;
@@ -220,7 +223,6 @@ body {
   }
   .header__nav__menu__list {
     justify-content: flex-start;
-    margin-left: 0;
   }
   .header__logo {
     margin-bottom: 30px;
@@ -242,13 +244,14 @@ body {
     grid-template-areas: "header__nav header__nav" "header__logo header__burger";
   }
   .header__logo {
-    margin-left: 30px;
+    margin-left: 15px;
   }
   .header__nav {
     display: flex;
     justify-content: space-between;
     background-color: #F5F5FA33;
     padding: 15px;
+    margin-bottom: 15px;
   }
   .header__nav__text {
     display: none;
@@ -298,12 +301,18 @@ body {
   .header__nav__menu__item:last-child {
     margin-bottom: 0;
   }
+  .header__nav__menu__item:active {
+    background-color: #E6E6F0;
+  }
   .header__nav__menu__link {
     display: block;
     font-size: 24px;
     font-weight: 700;
     line-height: 29px;
     color: #24A3FF;
+  }
+  .header__nav__menu__link_active {
+    color: #F0145A;
   }
   .header__burger {
     display: block;
