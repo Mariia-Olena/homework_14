@@ -1,0 +1,121 @@
+.team__title {
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 46px;
+}
+
+.team__card__name {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.team__card__post {
+  font-size: 14px;
+  line-height: 22px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  max-width: 1600px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.team {
+  padding: 60px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.team__title {
+  background-image: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-bottom: 60px;
+}
+.team__cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 60px;
+}
+.team__card {
+  display: flex;
+  flex-direction: column;
+}
+.team__card__img {
+  width: 493.33px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+.team__card__wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.team__card__name {
+  color: #323264;
+}
+.team__card__name:hover {
+  color: #F0145A;
+}
+.team__card__post {
+  color: #B3B3BA;
+}
+
+@media (max-width: 1919px) {
+  .container {
+    max-width: 1320px;
+  }
+
+  .team__card__img {
+    width: 400px;
+  }
+}
+@media (max-width: 1439px) {
+  .container {
+    max-width: 904px;
+  }
+
+  .team__card__img {
+    width: 261.33px;
+  }
+}
+@media (max-width: 1023px) {
+  .container {
+    max-width: 648px;
+  }
+
+  .team__cards {
+    grid-template-columns: 1fr 1fr;
+  }
+  .team__card__img {
+    width: 261.33px;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    max-width: auto;
+  }
+
+  .team__cards {
+    grid-template-columns: 1fr;
+  }
+  .team__card__img {
+    width: 315px;
+    height: 300;
+  }
+}
+
+/*# sourceMappingURL=style_team.css.map */
