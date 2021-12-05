@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="slider/slick-1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="slider/slick-1.8.1/slick/slick-theme.css">
     <link rel="stylesheet" href="css/header_footer.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Homepage</title>
@@ -173,6 +175,61 @@
         <path d="M20 0H1900C1900 5.52285 1895.52 10 1890 10H29.9999C24.4771 10 20 5.52285 20 0Z" fill="#CACADB"/>
     </svg>
     <main>
+        <section class="slider__wrap">
+            <div id="slider" class="slider">
+                <div class="slider__item">
+                    <div class="slider__slide">
+                        <img src="images/team/alexander_alexandrovsky.jpg" alt="" class="slider__img">
+                        <div class="slider__text">
+                            <a href="pages/team.html" class="slider__link">команда
+                                <svg width="8" height="11" viewBox="0 0 8 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.5 1L6 5.5L1.5 10" stroke="#24A3FF" stroke-width="2"/>
+                                </svg>
+                            </a>
+                            <p class="slider__title">
+                                Ми звикли брати на себе відповідальність та завжди гарантуємо чесну, вчасну допомогу, навіть у ситуаціях, коли більшість безсилі.
+                            </p>
+                            <p class="slider__name">Олександр Олександровський</p>
+                            <p class="slider__post">Керуючий партнер</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider__item">
+                    <div class="slider__slide">
+                        <img src="images/team/julia_wolk.jpg" alt="" class="slider__img">
+                        <div class="slider__text">
+                            <a href="pages/team.html" class="slider__link">команда
+                                <svg width="8" height="11" viewBox="0 0 8 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.5 1L6 5.5L1.5 10" stroke="#24A3FF" stroke-width="2"/>
+                                </svg>
+                            </a>
+                            <p class="slider__title">
+                                Ми звикли брати на себе відповідальність та завжди гарантуємо чесну, вчасну допомогу, навіть у ситуаціях, коли більшість безсилі.
+                            </p>
+                            <p class="slider__name">Юлія Вовк</p>
+                            <p class="slider__post">Керуючий партнер</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider__item">
+                    <div class="slider__slide">
+                        <img src="images/team/evgeny_patrikov.jpg" alt="" class="slider__img">
+                        <div class="slider__text">
+                            <a href="pages/team.html" class="slider__link">команда
+                                <svg width="8" height="11" viewBox="0 0 8 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.5 1L6 5.5L1.5 10" stroke="#24A3FF" stroke-width="2"/>
+                                </svg>
+                            </a>
+                            <p class="slider__title">
+                                Ми звикли брати на себе відповідальність та завжди гарантуємо чесну, вчасну допомогу, навіть у ситуаціях, коли більшість безсилі.
+                            </p>
+                            <p class="slider__name">Євгеній Партиков</p>
+                            <p class="slider__post">Керуючий партнер</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section class="clients">
             <div class="container">
                 <h2 class="clients_title">They already trust us</h2>
@@ -315,5 +372,8 @@
             menu.classList.remove('header__nav__menu__wrap_open');
         });
     </script>
+    <script src="slider/jquery-3.6.0.min.js"></script>
+    <script src="slider/slick-1.8.1/slick/slick.js"></script>
+    <script src="slider/script.js"></script>
 </body>
 </html>
