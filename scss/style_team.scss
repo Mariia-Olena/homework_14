@@ -8,6 +8,12 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+.container_header {
+    max-width: 1600px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
 .container {
     max-width: 1600px;
     margin-right: auto;
@@ -28,6 +34,7 @@ body {
         -webkit-background-clip: text;
         color: transparent;
         margin-bottom: 60px;
+        padding: 0 120px;
     }
 
     &__cards {
@@ -68,17 +75,15 @@ body {
         @extend %paragraph_small;
         color: $color_grey_text;
     }
-
-
-
-
-
-
 }
 
 @media (max-width: 1919px) {
+    .container_header {
+        padding: 0 60px;
+    } 
+
     .container {
-        max-width: 1320px;
+        padding: 0 60px;
     }
 
     .team {
@@ -89,10 +94,6 @@ body {
 }
 
 @media (max-width: 1439px) {
-    .container {
-        max-width: 904px;
-    }
-
     .team {
         &__card__img {
             width:261.33px;
@@ -101,30 +102,40 @@ body {
 }
 
 @media (max-width: 1023px) {
-    .container {
-        max-width: 648px;
+    .container_header {
+        padding: 0;
     }
 
     .team {
+        &__title {
+            padding: 0;
+        }
+
         &__cards {
             grid-template-columns: 1fr 1fr;
         }
 
         &__card__img {
-            width:261.33px;
+            width: 261.33px;
         }
     }
 }
 
-@media (max-width: 768px) {
-
+@media (max-width: 768px) {  
     .container {
-        max-width: auto;
+        padding: 0 30px;
     }
     
     .team {
+        padding: 0 0 30px 0;
+
+        &__title {
+            margin-bottom: 30px;
+        }
+
         &__cards {
             grid-template-columns: 1fr;
+            grid-gap: 30px;
         }
 
         &__card__img {
