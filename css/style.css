@@ -1,4 +1,4 @@
-.slider__title, .services__title, .menu__link, .h__title {
+.publications__title, .slider__title, .services__title, .menu__link, .h__title {
   font-size: 38px;
   font-weight: 700;
   line-height: 46px;
@@ -16,7 +16,7 @@
   line-height: 27px;
 }
 
-.slider__link, .services__link_title {
+.publications__button, .clients__title, .slider__link, .services__link_title {
   font-size: 14px;
   font-weight: 700;
   line-height: 17px;
@@ -24,7 +24,7 @@
   text-transform: uppercase;
 }
 
-.slider__name {
+.publications__subtitle, .slider__name {
   font-size: 16px;
   font-weight: 700;
   line-height: 20px;
@@ -35,7 +35,7 @@
   line-height: 26px;
 }
 
-.slider__post {
+.publications__text, .slider__post {
   font-size: 14px;
   line-height: 22px;
 }
@@ -242,6 +242,118 @@ body {
 .slick-dots li.slick-active button:before {
   opacity: 1;
   color: #24A3FF;
+}
+
+.clients {
+  margin: 60px 0;
+}
+.clients__title {
+  color: #323264;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.clients__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.clients__item {
+  display: flex;
+  height: 120px;
+}
+.clients__link {
+  margin: auto;
+}
+.clients__item_1 {
+  background-color: #1C4280;
+}
+.clients__item_2 {
+  background-color: #143646;
+}
+.clients__item_3 {
+  background-color: #F48B30;
+}
+.clients__item_4 {
+  background-color: #9E4DC3;
+}
+.clients__item_5 {
+  background-color: #FD9339;
+}
+.clients__item_6 {
+  background-color: #E2E2E4;
+}
+.clients__item_7 {
+  background-color: #C71C36;
+}
+.clients__item_8 {
+  background-color: #DCF3F9;
+}
+.clients__item_9 {
+  background-color: #EAEAEA;
+}
+.clients__item_10 {
+  background-color: #282240;
+}
+.clients__item_11 {
+  background-color: #1D4568;
+}
+.clients__item_12 {
+  background-color: #000000;
+}
+
+.publications {
+  background-color: #F5F5FA;
+  padding: 30px 0;
+}
+.publications__button {
+  color: #24A3FF;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+.publications__button:hover {
+  color: #F0145A;
+}
+.publications__button:hover .publications__svg {
+  stroke: #F0145A;
+}
+.publications__title {
+  background-image: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-bottom: 30px;
+}
+.publications__cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 30px;
+}
+.publications__link {
+  text-decoration: none;
+}
+.publications__text-part {
+  padding: 30px;
+  background-color: #FFFFFF;
+  border-radius: 0 0 8px 8px;
+  min-height: 230px;
+}
+.publications__subtitle {
+  color: #24A3FF;
+  margin-bottom: 15px;
+}
+.publications__data {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #B3B3BA;
+  margin-bottom: 15px;
+}
+.publications__text {
+  color: #000000;
+  border-top: 4px solid #E6E6F0;
+  padding-top: 15px;
 }
 
 @media (max-width: 1919px) {

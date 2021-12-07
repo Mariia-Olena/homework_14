@@ -247,6 +247,149 @@ body {
     color: $color_active_regular;
 }
 
+.clients {
+    margin: 60px 0;
+
+    &__title {
+        @extend %font_h3_caps;
+        color: $color_main;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        border-radius: 12px;
+        overflow: hidden;
+    }
+
+    &__item {
+        display: flex;
+        height: 120px;
+    }
+
+    &__link {
+        margin: auto;
+    }
+
+    &__item_1 {
+        background-color: #1C4280;
+    }
+
+    &__item_2 {
+        background-color: #143646;
+    }
+
+    &__item_3 {
+        background-color: #F48B30;
+    }
+
+    &__item_4 {
+        background-color: #9E4DC3;
+    }
+
+    &__item_5 {
+        background-color: #FD9339;
+    }
+
+    &__item_6 {
+        background-color: #E2E2E4;
+    }
+
+    &__item_7 {
+        background-color: #C71C36;
+    }
+
+    &__item_8 {
+        background-color: #DCF3F9;
+    }
+
+    &__item_9 {
+        background-color: #EAEAEA;
+    }
+
+    &__item_10 {
+        background-color: #282240;
+    }
+
+    &__item_11 {
+        background-color: #1D4568;
+    }
+
+    &__item_12 {
+        background-color: #000000;
+    }
+}
+
+.publications {
+    background-color: $color_grey_bg;
+    padding: 30px 0;
+
+    &__button {
+        @extend %font_h3_caps;
+        color: $color_active_regular;
+        text-decoration: none;
+        margin-bottom: 10px;
+
+        &:hover {
+            color: $color_accent;
+        } 
+    }
+
+    &__button:hover &__svg {
+        stroke: $color_accent;
+    }
+
+    &__title {
+        @extend %font_hero;
+        background-image: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+        background-size: cover;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        margin-bottom: 30px;
+    }
+
+    &__cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 30px;
+    }
+
+    &__link {
+        text-decoration: none;
+    }
+
+    &__text-part {
+        padding: 30px;
+        background-color: $color_white;
+        border-radius: 0 0 8px 8px;
+        min-height: 230px;
+    }
+
+    &__subtitle {
+        @extend %font_h4;
+        color: $color_active_regular;
+        margin-bottom: 15px;
+    }
+
+    &__data {
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        color: $color_grey_text;
+        margin-bottom: 15px;
+    }
+
+    &__text {
+        @extend %paragraph_small;
+        color: #000000;
+        border-top: 4px solid $color_grey_separator;
+        padding-top: 15px;
+    }
+}
+
 @media (max-width: 1919px) {
     .container {
         padding: 0 60px;
