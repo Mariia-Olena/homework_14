@@ -62,18 +62,30 @@ body {
         align-items: flex-start;
     }
 
+    &__card__wrap:hover .team__card__svg_background{
+        fill: $color_grey_bgAlt;
+        transition: 0.3s;
+    }
+
+    &__card__wrap:hover .team__card__svg_arrow{
+        stroke: $color_accent;
+        transition: 0.3s;
+    }
+    
+    &__card__wrap:hover .team__card__name{
+        color: $color_accent;
+        transition: 0.3s;
+    }
+
     &__card__name {
         @extend %font_h4;
         color: $color_main;
-
-        &:hover {
-            color: $color_accent;
-        }
     }
 
     &__card__post {
         @extend %paragraph_small;
         color: $color_grey_text;
+        margin-top: -10px;
     }
 }
 
@@ -116,12 +128,16 @@ body {
         }
 
         &__card__img {
-            width: 261.33px;
+            width: 294px;
         }
     }
 }
 
-@media (max-width: 768px) {  
+@media (max-width: 767px) {  
+    body {
+        min-width: 375px;
+    }
+
     .container {
         padding: 0 30px;
     }
@@ -130,6 +146,9 @@ body {
         padding: 0 0 30px 0;
 
         &__title {
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 37px;
             margin-bottom: 30px;
         }
 
