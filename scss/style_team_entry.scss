@@ -129,8 +129,12 @@ body {
 }
 
 @media (max-width: 1023px) {
+    .container_header {
+        padding: 0;
+    }
+
     .profile {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 330px 1fr;
         grid-template-areas:
         "profile__img profile__name"
         "profile__biography profile__biography";
@@ -142,10 +146,16 @@ body {
         &__name {
             margin-top: auto;
             margin-bottom: auto;
+            align-items: flex-start;
         }
     }
 }
+
 @media (max-width: 767px) {
+    body {
+        min-width: 375px;
+    }
+    
     .container_header {
         padding: 0;
     } 
@@ -155,7 +165,7 @@ body {
     }
 
     .profile {
-        padding-top: 30px;
+        padding-top: 0;
         grid-template-columns: 1fr;
         grid-template-areas:
         "profile__img"
