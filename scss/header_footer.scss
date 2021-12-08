@@ -159,9 +159,19 @@ body {
         @extend  %font_h4;
         text-decoration: none;
         color: $color_white;
+
+        &:hover {
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+    }
+
+    &__nav__menu__link_active {
+        color: $color_accent;
+        text-decoration: underline;
+        text-underline-offset: 3px;
     }
 }
-
 
 //header gray//
 .header {
@@ -249,7 +259,6 @@ body {
         color: $color_active_regular;
     }
 
-
     &__contacts {
         grid-area: footer__contacts;
         display: flex;
@@ -316,11 +325,11 @@ body {
 @media (max-width: 1023px) {
     .header {
         margin-left: 60px;
-
+        grid-template-columns: 1fr;
         grid-template-areas:
-        "header__nav header__nav"
-        "header__logo header__logo" 
-        "header__nav__menu__wrap header__nav__menu__wrap";
+        "header__nav"
+        "header__logo" 
+        "header__nav__menu__wrap";
 
         &__nav {
             justify-content: flex-start;
@@ -329,16 +338,10 @@ body {
   
         &__nav__menu__list {
             justify-content: flex-start;
-
         }
         
         &__logo {
             margin-bottom: 30px;
-        }
-    
-        &__nav__item {
-            margin-left: 0;
-            margin-right: 15px;
         }
     
         &__nav__menu__item {
@@ -354,9 +357,8 @@ body {
         padding-top: 0;
         display: grid;
         grid-template-areas:
-        "header__nav header__nav header__nav"
-        "header__logo header__logo header__burger";
-
+        "header__nav header__nav"
+        "header__logo header__burger";
 
         &__logo {
             margin-left: 15px;
@@ -429,6 +431,13 @@ body {
             top: 19px;
             right: 19px;
             cursor: pointer;
+            width: 32px;
+            height: 32px;
+
+            &:hover {
+                background-color: $color_grey_separator;
+                border-radius: 8px;
+            }
         }
 
         &__nav__menu__list {
@@ -457,10 +466,15 @@ body {
             font-weight: 700;
             line-height: 29px;
             color: $color_active_regular;
+
+            &:hover {
+                text-decoration: none;
+            }
         }
 
        &__nav__menu__link_active {
-        color: $color_accent;
+            color: $color_accent;
+            text-decoration: none;
        }
 
         &__burger {
@@ -473,6 +487,11 @@ body {
             cursor: pointer;
             margin-left: auto;
             margin-right: 15px;
+
+            &:active {
+                background-color: $color_grey_separator;
+                border-radius: 8px;
+            }
         }
     }
 

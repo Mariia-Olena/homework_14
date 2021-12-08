@@ -151,6 +151,15 @@ body {
   text-decoration: none;
   color: #FFFFFF;
 }
+.header__nav__menu__link:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.header__nav__menu__link_active {
+  color: #F0145A;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
 
 .header__nav__link_color {
   color: #B3B3BA;
@@ -273,7 +282,8 @@ body {
 @media (max-width: 1023px) {
   .header {
     margin-left: 60px;
-    grid-template-areas: "header__nav header__nav" "header__logo header__logo" "header__nav__menu__wrap header__nav__menu__wrap";
+    grid-template-columns: 1fr;
+    grid-template-areas: "header__nav" "header__logo" "header__nav__menu__wrap";
   }
   .header__nav {
     justify-content: flex-start;
@@ -285,10 +295,6 @@ body {
   .header__logo {
     margin-bottom: 30px;
   }
-  .header__nav__item {
-    margin-left: 0;
-    margin-right: 15px;
-  }
   .header__nav__menu__item {
     margin-left: 0;
     margin-right: 15px;
@@ -299,7 +305,7 @@ body {
     margin-left: 0;
     padding-top: 0;
     display: grid;
-    grid-template-areas: "header__nav header__nav header__nav" "header__logo header__logo header__burger";
+    grid-template-areas: "header__nav header__nav" "header__logo header__burger";
   }
   .header__logo {
     margin-left: 15px;
@@ -360,6 +366,12 @@ body {
     top: 19px;
     right: 19px;
     cursor: pointer;
+    width: 32px;
+    height: 32px;
+  }
+  .header__nav__menu__button:hover {
+    background-color: #E6E6F0;
+    border-radius: 8px;
   }
   .header__nav__menu__list {
     flex-direction: column;
@@ -384,8 +396,12 @@ body {
     line-height: 29px;
     color: #24A3FF;
   }
+  .header__nav__menu__link:hover {
+    text-decoration: none;
+  }
   .header__nav__menu__link_active {
     color: #F0145A;
+    text-decoration: none;
   }
   .header__burger {
     display: block;
@@ -397,6 +413,10 @@ body {
     cursor: pointer;
     margin-left: auto;
     margin-right: 15px;
+  }
+  .header__burger:active {
+    background-color: #E6E6F0;
+    border-radius: 8px;
   }
 
   .footer__wrap {
