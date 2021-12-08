@@ -58,6 +58,8 @@ body {
     margin-bottom: 60px;
     
     &__list {
+        display: flex;
+        flex-direction: column;
         text-align: right;
         padding-right: 60px;
         margin-left: 120px;
@@ -130,6 +132,11 @@ body {
         }
     }
 
+    &__link_title:hover .services__link_title_svg {
+        stroke: $color_accent;
+        transition: 0.3s;
+    }
+
     &__title {
         @extend %font_hero;
         background-image: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
@@ -153,6 +160,8 @@ body {
     &__img {
         border-radius: 24px;
         margin-bottom: 30px;
+        background-color: $color_white;
+        padding: 14px;
     }
 
     &__subtitle {
@@ -226,6 +235,10 @@ body {
     }
 }
 
+.slick-dots {
+    bottom: -48px;
+}
+
 .slick-dots li {
     width: 16px;
     height: 16px;
@@ -262,6 +275,8 @@ body {
         grid-template-columns: 1fr 1fr 1fr 1fr;
         border-radius: 12px;
         overflow: hidden;
+        max-width: 1720px;
+        margin: 0 auto;
     }
 
     &__item {
@@ -354,22 +369,30 @@ body {
     &__cards {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
         grid-gap: 30px;
+    }
+
+    &__card {
+        background-color: $color_white;
+        border-radius: 0 0 8px 8px;
     }
 
     &__link {
         text-decoration: none;
     }
 
+    &__img {
+        width: 100%;
+    }
+
     &__text-part {
         padding: 30px;
-        background-color: $color_white;
-        border-radius: 0 0 8px 8px;
-        min-height: 230px;
     }
 
     &__subtitle {
         @extend %font_h4;
+        text-decoration: none;
         color: $color_active_regular;
         margin-bottom: 15px;
     }
@@ -394,6 +417,15 @@ body {
     .container {
         padding: 0 60px;
     }
+
+    .clients {
+        margin: 60px 0;
+    
+        &__list {
+            max-width: 100%;
+            border-radius: 0;
+        }
+    }
 }
 
 @media (max-width: 1439px) {
@@ -414,7 +446,7 @@ body {
         padding: 60px 60px 0 60px;
         
         &__list {
-            display: flex;
+            flex-direction: row;
             overflow-x: scroll;
             border-right: none;
             border-bottom: 4px solid #FFFFFF4D;
@@ -424,6 +456,8 @@ body {
         &__item {
             margin-bottom: 60px;
             margin-right: 30px;
+            max-width: 100%;
+            white-space: nowrap;
         }
         
         &_text-part {
@@ -439,22 +473,68 @@ body {
             grid-template-columns: 1fr 1fr;
         }
     }
+
+    .clients {
+        margin-bottom: 0;
+
+        &__list {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+
+    .publications {
+        padding: 30px 60px;
+
+        &__cards {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        &__card {
+            &:last-child {
+                grid-column-start: span 2;
+            }
+        }
+    }
 }
 
 @media (max-width: 767px) {
+
+    body {
+        min-width: 375px;
+    }
+
     .h {
         &__wrap {
             background-size: auto 100%;
+        }
+
+        &__title {
+            text-align: center;
+            padding: 0 30px;
         }
     }
 
     .menu {
         padding: 30px 30px 0 30px;
+        margin-bottom: 30px;
 
         &__item {
             margin-bottom: 30px;
+            width: 100%;
+        }
+
+        &__link {
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 37px;
         }
         
+        &__subtitle {
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 24px;
+        }
+
         &_text-part {
             margin-top: 30px;
         }
@@ -465,6 +545,9 @@ body {
 
         &__title {
             margin-bottom: 30px;
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 37px;
         }
 
         &__list {
@@ -472,4 +555,35 @@ body {
             grid-gap: 30px;
         }
     }
+
+    .clients {
+        margin: 30px 0 0 0;
+
+        &__list {
+            grid-template-columns: 1fr;
+        }
+
+        &__item:nth-of-type(n+7) {
+            display: none;
+        }
+    }
+
+    .publications {
+        &__title {
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 37px;
+        }
+    
+        &__cards {
+            grid-template-columns: 1fr;
+        }
+
+        &__card {
+            &:last-child {
+                grid-column-start: 1;
+            }
+        }
+    }
 }
+
