@@ -8,6 +8,12 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+.container_header {
+    max-width: 1600px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
 //header white//
 .header {
     position: relative;
@@ -322,7 +328,17 @@ body {
     }
 }
 
+@media (max-width: 1919px) {
+    .container_header {
+        padding: 0 60px;
+    }
+}
+
 @media (max-width: 1023px) {
+    .container_header {
+        padding: 0;
+    }
+
     .header {
         margin-left: 60px;
         grid-template-columns: 1fr;
