@@ -135,6 +135,10 @@ body {
   border: 1px solid #FF0000;
   color: #FF0000;
 }
+.form__input:disabled {
+  background-color: #EDEDF7;
+  border: 1px solid #FFFFFF;
+}
 .form__button {
   background-color: #24A3FF;
   color: #FFFFFF;
@@ -145,6 +149,18 @@ body {
 }
 .form__button:active {
   background-color: #006CCF;
+}
+.form__button_progress {
+  background-color: #EDEDF7;
+  background-image: url(../images/ellipse.svg);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  color: transparent;
+}
+.form__button_response {
+  background-color: #EDEDF7;
+  color: #323264;
 }
 
 textarea {

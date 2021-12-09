@@ -127,6 +127,11 @@ body {
             border: 1px solid #FF0000;
             color: #FF0000;
         }
+
+        &:disabled {
+            background-color: $color_grey_bgAlt;
+            border: 1px solid $color_white;
+        }
     }
 
     &__button {
@@ -141,6 +146,20 @@ body {
 
         &:active {
             background-color: $color_active_active;
+        }
+
+        &_progress {
+            background-color: $color_grey_bgAlt;
+            background-image: url(../images/ellipse.svg);
+            background-repeat: no-repeat;
+            background-position-x: center;
+            background-position-y: center;
+            color: transparent;
+        }
+
+        &_response {
+            background-color: $color_grey_bgAlt;
+            color: $color_main;
         }
     }
 }
