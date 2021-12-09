@@ -70,6 +70,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  flex-wrap: wrap;
+  text-decoration: none;
 }
 .team__card__wrap:hover .team__card__svg_background {
   fill: #EDEDF7;

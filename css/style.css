@@ -220,6 +220,14 @@ body {
   text-decoration: none;
   margin-bottom: 5px;
 }
+.slider__link:hover {
+  color: #F0145A;
+  transition: 0.3s;
+}
+.slider__link:hover .slider__link__svg {
+  stroke: #F0145A;
+  transition: 0.3s;
+}
 .slider__title {
   background-image: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
   background-size: cover;

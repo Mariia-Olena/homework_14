@@ -215,6 +215,16 @@ body {
         color: $color_active_regular;
         text-decoration: none;
         margin-bottom: 5px;
+
+        &:hover {
+            color: $color_accent;
+            transition: 0.3s;
+        }
+    }
+
+    &__link:hover .slider__link__svg {
+        stroke: $color_accent;
+        transition: 0.3s;
     }
 
     &__title {
