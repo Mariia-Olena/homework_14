@@ -32,6 +32,12 @@ body {
   margin-left: auto;
 }
 
+.container_footer {
+  max-width: 1600px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .header {
   position: relative;
   z-index: 2;
@@ -289,6 +295,10 @@ body {
   .container_header {
     padding: 0 60px;
   }
+
+  .container_footer {
+    padding: 0 60px;
+  }
 }
 @media (max-width: 1023px) {
   .container_header {
@@ -316,6 +326,14 @@ body {
   }
 }
 @media (max-width: 767px) {
+  body {
+    min-width: 375px;
+  }
+
+  .container_footer {
+    padding: 0 30px;
+  }
+
   .header {
     margin-left: 0;
     padding-top: 0;

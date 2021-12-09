@@ -195,7 +195,6 @@ body {
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 60px;
   margin-bottom: 106px;
 }
 .slider__item {
@@ -417,13 +416,8 @@ body {
   }
 }
 @media (max-width: 1023px) {
-  .container {
-    padding: 0;
-  }
-
   .menu {
     flex-direction: column;
-    padding: 60px 60px 0 60px;
   }
   .menu__list {
     flex-direction: row;
@@ -452,16 +446,10 @@ body {
     flex-direction: column;
   }
 
-  .services {
-    padding: 0 60px;
-  }
   .services__list {
     grid-template-columns: 1fr 1fr;
   }
 
-  .clients {
-    margin-bottom: 0;
-  }
   .clients__list {
     grid-template-columns: 1fr 1fr 1fr;
   }
@@ -481,6 +469,10 @@ body {
     min-width: 375px;
   }
 
+  .container {
+    padding: 0 30px;
+  }
+
   .h__wrap {
     background-size: auto 100%;
   }
@@ -490,7 +482,6 @@ body {
   }
 
   .menu {
-    padding: 30px 30px 0 30px;
     margin-bottom: 30px;
   }
   .menu__item {
@@ -520,9 +511,6 @@ body {
     line-height: 37px;
   }
 
-  .services {
-    padding: 0 30px;
-  }
   .services__title {
     margin-bottom: 30px;
     font-size: 30px;
@@ -534,9 +522,6 @@ body {
     grid-gap: 30px;
   }
 
-  .clients {
-    margin: 30px 0 0 0;
-  }
   .clients__list {
     grid-template-columns: 1fr;
   }
@@ -545,7 +530,7 @@ body {
   }
 
   .publications {
-    padding: 30px;
+    padding: 30px 0;
   }
   .publications__title {
     font-size: 30px;

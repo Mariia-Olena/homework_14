@@ -36,12 +36,6 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-.container_header {
-  max-width: 1600px;
-  margin-right: auto;
-  margin-left: auto;
-}
-
 .container {
   max-width: 1360px;
   margin-right: auto;
@@ -109,10 +103,6 @@ body {
 }
 
 @media (max-width: 1919px) {
-  .container_header {
-    padding: 0 60px;
-  }
-
   .container {
     padding: 0 60px;
   }
@@ -134,10 +124,6 @@ body {
   }
 }
 @media (max-width: 1023px) {
-  .container_header {
-    padding: 0;
-  }
-
   .profile {
     grid-template-columns: 330px 1fr;
     grid-template-areas: "profile__img profile__name" "profile__biography profile__biography";
@@ -154,10 +140,6 @@ body {
 @media (max-width: 767px) {
   body {
     min-width: 375px;
-  }
-
-  .container_header {
-    padding: 0;
   }
 
   .container {
