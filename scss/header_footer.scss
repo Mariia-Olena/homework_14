@@ -350,7 +350,7 @@ body {
     }
 
     .container_footer {
-        padding: 0 185px;
+        padding: 0 60px;
     }
 
     .header {
@@ -377,22 +377,6 @@ body {
         &__nav__menu__item {
             margin-left: 0;
             margin-right: 15px;
-        }
-    }
-
-    .footer {
-        &__wrap {
-            grid-template-areas:
-            "footer__address"
-            "footer__contacts"
-            "footer__copyright";
-
-            grid-template-columns: 1fr;
-        }
-
-        &__copyright {
-            justify-content: center;
-            margin-top: 30px;
         }
     }
 }
