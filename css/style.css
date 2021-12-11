@@ -127,7 +127,7 @@ body {
 }
 .menu__item {
   margin-bottom: 30px;
-  width: 375px;
+  white-space: nowrap;
 }
 .menu__link {
   color: #B3B3BA;
